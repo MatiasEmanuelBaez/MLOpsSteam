@@ -5,11 +5,6 @@ import csv
 
 app = FastAPI()
 
-
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
 @app.get("/Resultados/{genero}")
 def PlayTimeGenre( genero : str ):
     with open('Desarrollo/Resultados/PConsulta.csv', newline='') as File:
