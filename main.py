@@ -5,8 +5,11 @@ import csv
 
 app = FastAPI()
 
+<<<<<<< HEAD
 
 # 1 ###################################################################################################
+=======
+>>>>>>> 243147e3c54d730dadd389856f485a008989d012
 @app.get("/Resultados/{genero}")
 def PlayTimeGenre( genero : str ):
     with open('Desarrollo/Resultados/PConsulta.csv', newline='') as File:
@@ -35,6 +38,7 @@ def UserForGenre( genero : str ):
                 break
         
         if encontrar == 0:
+<<<<<<< HEAD
             return("Género no encontrado.")
 
 
@@ -142,3 +146,6 @@ def UsersNotRecommend( anio : int ):
 
 
 # 5 ###################################################################################################
+=======
+            return("Género no encontrado")
+>>>>>>> 243147e3c54d730dadd389856f485a008989d012
