@@ -7,7 +7,7 @@ app = FastAPI()
 
 
 
-@app.get("/Resultados/{genero}")
+@app.get("/Resultados/{PlayTimeGenre}")
 def PlayTimeGenre( genero : str ):
     with open('Desarrollo/Resultados/PConsulta.csv', newline='') as File:
         reader = csv.reader(File)
@@ -23,7 +23,7 @@ def PlayTimeGenre( genero : str ):
 
 
 
-@app.get("/Resultados/{genero}")
+@app.get("/Resultados/{UserForGenre}")
 def UserForGenre( genero : str ):
     with open('Desarrollo/Resultados/SConsulta.csv', newline='') as File:
         reader = csv.reader(File)
@@ -39,7 +39,7 @@ def UserForGenre( genero : str ):
 
 
 
-@app.get("/Resultados/{anio}")
+@app.get("/Resultados/{UsersRecommend}")
 def UsersRecommend( anio : int ):
     with open('Resultados/TConsulta.csv', newline='') as File:
         reader = csv.reader(File)
@@ -91,7 +91,7 @@ def UsersRecommend( anio : int ):
 
 
 
-@app.get("/Resultados/{anio}")
+@app.get("/Resultados/{UsersNotRecommend}")
 def UsersNotRecommend( anio : int ):
     with open('Resultados/TConsulta.csv', newline='') as File:
         reader = csv.reader(File)
