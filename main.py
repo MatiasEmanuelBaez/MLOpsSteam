@@ -5,11 +5,8 @@ import csv
 
 app = FastAPI()
 
-<<<<<<< HEAD
 
-# 1 ###################################################################################################
-=======
->>>>>>> 243147e3c54d730dadd389856f485a008989d012
+
 @app.get("/Resultados/{genero}")
 def PlayTimeGenre( genero : str ):
     with open('Desarrollo/Resultados/PConsulta.csv', newline='') as File:
@@ -25,7 +22,7 @@ def PlayTimeGenre( genero : str ):
             return("Género no encontrado.")
 
 
-# 2 ###################################################################################################
+
 @app.get("/Resultados/{genero}")
 def UserForGenre( genero : str ):
     with open('Desarrollo/Resultados/SConsulta.csv', newline='') as File:
@@ -38,11 +35,10 @@ def UserForGenre( genero : str ):
                 break
         
         if encontrar == 0:
-<<<<<<< HEAD
             return("Género no encontrado.")
 
 
-# 3 ###################################################################################################
+
 @app.get("/Resultados/{anio}")
 def UsersRecommend( anio : int ):
     with open('Resultados/TConsulta.csv', newline='') as File:
@@ -93,7 +89,8 @@ def UsersRecommend( anio : int ):
     else:
         print ("No se encontraron recomendaciones positivas para el año ingresado.")
 
-# 4 ###################################################################################################
+
+
 @app.get("/Resultados/{anio}")
 def UsersNotRecommend( anio : int ):
     with open('Resultados/TConsulta.csv', newline='') as File:
@@ -143,9 +140,3 @@ def UsersNotRecommend( anio : int ):
         print ("Puesto 1: ", puestoU, "- Puesto 2: ", puestoD, "- Puesto 3: ", puestoT)  
     else:
         print ("No se encontraron recomendaciones negativas para el año ingresado.")
-
-
-# 5 ###################################################################################################
-=======
-            return("Género no encontrado")
->>>>>>> 243147e3c54d730dadd389856f485a008989d012
