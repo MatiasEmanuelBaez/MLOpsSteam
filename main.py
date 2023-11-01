@@ -41,7 +41,7 @@ def UserForGenre( genero : str ):
 
 @app.get("/UsersRecommend/{anio}")
 def UsersRecommend( anio : int ):
-    with open('Resultados/TConsulta.csv', newline='') as File:
+    with open('Desarrollo/Resultados/TConsulta.csv', newline='') as File:
         reader = csv.reader(File)
         
         encontrar=0
@@ -56,9 +56,9 @@ def UsersRecommend( anio : int ):
         tres = 0
         
         x = 0
-        x == fila[4]+fila[5]
         
         for fila in reader:
+            x == fila[4]+fila[5]
             if anio == fila[2]:
                 if fila[1] == True:
                     encontrar = 1
@@ -93,7 +93,7 @@ def UsersRecommend( anio : int ):
 
 @app.get("/UsersNotRecommend/{anio}")
 def UsersNotRecommend( anio : int ):
-    with open('Resultados/TConsulta.csv', newline='') as File:
+    with open('Desarrollo/Resultados/TConsulta.csv', newline='') as File:
         reader = csv.reader(File)
         
         encontrar=0
@@ -108,9 +108,9 @@ def UsersNotRecommend( anio : int ):
         tres = 0
         
         x = 0
-        x == fila[6]
         
         for fila in reader:
+            x == fila[6]
             if anio == fila[2]:
                 if fila[1] == False:
                     encontrar = 1
