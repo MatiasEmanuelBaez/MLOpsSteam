@@ -89,9 +89,9 @@ def UsersRecommend( anio : int ):
                                         puestoT = fila[3]
 
         if encontrar == 1:
-            print ("Puesto 1: ", puestoU, "- Puesto 2: ", puestoD, "- Puesto 3: ", puestoT)  
+            return ("Puesto 1: ", puestoU, "- Puesto 2: ", puestoD, "- Puesto 3: ", puestoT)  
         else:
-            print ("No se encontraron recomendaciones positivas para el año ingresado.")
+            return ("No se encontraron recomendaciones positivas para el año ingresado.")
 
 
 
