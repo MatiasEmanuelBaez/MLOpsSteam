@@ -151,7 +151,7 @@ def UsersNotRecommend( anio : int ):
 
 
 @app.get("/sentiment_analysis/{anio}")
-def PlayTimeGenre( anio : int ):
+def sentiment_analysis( anio : int ):
     with open('Desarrollo/Resultados/QConsulta.csv', newline='') as File:
         reader = csv.reader(File)
         
