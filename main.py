@@ -151,7 +151,7 @@ def UsersNotRecommend( anio : int ):
 
 
 @app.get("/sentiment_analysis/{anio}")
-def PlayTimeGenre( anio : int ):
+def sentiment_analysis( anio : int ):
     with open('Desarrollo/Resultados/QConsulta.csv', newline='') as File:
         reader = csv.reader(File)
         
@@ -160,7 +160,7 @@ def PlayTimeGenre( anio : int ):
         
         for fila in reader:
             if  fila[1].isnumeric():
-                if anio == fila[1]:
+                if anio == str(fila[1]):
                     cadena = 'Negative= ' + fila[4] + ', Neutral=' + fila[2] + ', Positive=' + fila[3]
                     return (cadena)
                     encontrar = 1
