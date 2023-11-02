@@ -42,7 +42,7 @@ def UserForGenre( genero : str ):
 @app.get("/UsersRecommend/{anio}")
 def UsersRecommend( anio : int ):
     with open('Desarrollo/Resultados/TConsulta.csv', newline='') as File:
-        reader = csv.reader(File)
+        reader = csv.reader(File, delimiter=',')
         
         encontrar=0
         
@@ -56,38 +56,42 @@ def UsersRecommend( anio : int ):
         tres = 0
         
         x = 0
-        
+            
         for fila in reader:
-            x == fila[4]+fila[5]
-            if anio == fila[2]:
-                if fila[1] == True:
-                    encontrar = 1
-                    if uno == 0:
-                        uno == x
-                        puestoU == fila[3]
-                    else:
-                        if x > uno:
-                            tres == dos
-                            puestoT == puestoD
-                            dos == uno
-                            puestoD == puestoU
-                            uno == x
-                            puestoU == fila[3]
+            
+            if  fila[4].isnumeric():
+            
+                x = int(fila[4]) + int(fila[5])
+                
+                if 2010 == int(fila[2]):
+                    if fila[1] == "True":                    
+                        encontrar = 1
+                        if uno == 0:
+                            uno = x
+                            puestoU = fila[3]
                         else:
-                            if x > dos:
-                                tres == dos
-                                puestoT == puestoD
-                                dos == x
-                                puestoD == fila[3]
+                            if int(x) > int(uno):
+                                tres = dos
+                                puestoT = puestoD
+                                dos = uno
+                                puestoD = puestoU
+                                uno = x
+                                puestoU = fila[3]
                             else:
-                                if x > tres:
-                                    tres == x
-                                    puestoT == fila[3]
+                                if int(x) > int(dos):
+                                    tres = dos
+                                    puestoT = puestoD
+                                    dos = x
+                                    puestoD = fila[3]
+                                else:
+                                    if int(x) > int(tres):
+                                        tres = x
+                                        puestoT = fila[3]
 
-    if encontrar == 1:
-        print ("Puesto 1: ", puestoU, "- Puesto 2: ", puestoD, "- Puesto 3: ", puestoT)  
-    else:
-        print ("No se encontraron recomendaciones positivas para el año ingresado.")
+        if encontrar == 1:
+            print ("Puesto 1: ", puestoU, "- Puesto 2: ", puestoD, "- Puesto 3: ", puestoT)  
+        else:
+            print ("No se encontraron recomendaciones positivas para el año ingresado.")
 
 
 
