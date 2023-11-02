@@ -63,7 +63,7 @@ def UsersRecommend( anio : int ):
             
                 x = int(fila[4]) + int(fila[5])
                 
-                if 2010 == int(fila[2]):
+                if anio == int(fila[2]):
                     if fila[1] == "True":                    
                         encontrar = 1
                         if uno == 0:
