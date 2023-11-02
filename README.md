@@ -51,6 +51,6 @@ El proyecto se implementó completamente en Python, utilizando las siguientes li
 
 Se entrega un link de acceso al deploy de la api y un video mostrando el funcionamiento de la misma por si deja de funcionar el servicio gratuito utilizado.
 
-[API REST o RESTful](https://rockcontent.com/es/blog/api-rest/)
+[video](https://youtu.be/-fgHKAYfnYk)
 
-[API REST o RESTful](https://rockcontent.com/es/blog/api-rest/)
+[API](https://matiasemanuelbaez-mlopssteam.onrender.com/docs)
