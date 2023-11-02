@@ -87,7 +87,7 @@ def UsersRecommend( anio : int ):
                         encontrar = 1
                         if uno == 0:
                             uno = x
-                            puestoU = fila[7]
+                            puestoU = fila[7] + ' /Id: ' +str(fila[3])
                         else:
                             if int(x) > int(uno):
                                 tres = dos
@@ -95,17 +95,17 @@ def UsersRecommend( anio : int ):
                                 dos = uno
                                 puestoD = puestoU
                                 uno = x
-                                puestoU = fila[7]
+                                puestoU = fila[7] + ' /Id: ' +str(fila[3])
                             else:
                                 if int(x) > int(dos):
                                     tres = dos
                                     puestoT = puestoD
                                     dos = x
-                                    puestoD = fila[7]
+                                    puestoD = fila[7] + ' /Id: ' +str(fila[3])
                                 else:
                                     if int(x) > int(tres):
                                         tres = x
-                                        puestoT = fila[7]
+                                        puestoT = fila[7] + ' /Id: ' +str(fila[3])
 
         if encontrar == 1:
             return ("Puesto 1: ", puestoU, "- Puesto 2: ", puestoD, "- Puesto 3: ", puestoT)  
@@ -143,7 +143,7 @@ def UsersNotRecommend( anio : int ):
                         encontrar = 1
                         if uno == 0:
                             uno = x
-                            puestoU = fila[7]
+                            puestoU = fila[7] + ' /Id: ' +str(fila[3])
                         else:
                             if int(x) > int(uno):
                                 tres = dos
@@ -151,17 +151,17 @@ def UsersNotRecommend( anio : int ):
                                 dos = uno
                                 puestoD = puestoU
                                 uno = x
-                                puestoU = fila[7]
+                                puestoU = fila[7] + ' /Id: ' +str(fila[3])
                             else:
                                 if int(x) > int(dos):
                                     tres = dos
                                     puestoT = puestoD
                                     dos = x
-                                    puestoD = fila[7]
+                                    puestoD = fila[7] + ' /Id: ' +str(fila[3])
                                 else:
                                     if int(x) > int(tres):
                                         tres = x
-                                        puestoT = fila[7]
+                                        puestoT = fila[7] + ' /Id: ' +str(fila[3])
 
         if encontrar == 1:
             return ("Puesto 1: ", puestoU, "- Puesto 2: ", puestoD, "- Puesto 3: ", puestoT)  
